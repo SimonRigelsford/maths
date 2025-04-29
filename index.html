@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-menu">
+        <h1>Maths Quiz</h1>
+        <button onclick="startGame('addition')">Addition</button>
+        <button onclick="startGame('subtraction')">Subtraction</button>
+        <button onclick="startGame('multiplication')">Multiplication</button>
+        <button onclick="startGame('division')">Division</button>
+        <button onclick="startGame('mixed')">Mixed Operations</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2 id="mode-title"></h2>
+        <div id="timer">Time Left: 120</div>
+        <div id="score">Score: 0</div>
+        <div id="question"></div>
+        <input type="number" id="answer" autocomplete="off">
+        <button onclick="submitAnswer()">Submit</button>
+    </div>
+
+    <div id="review" style="display: none;">
+        <h2>Review</h2>
+        <div id="final-score"></div>
+        <div id="question-list"></div>
+        <button onclick="restartSameMode()">Restart Same Mode</button>
+        <button onclick="goToMainMenu()">Go to Main Menu</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
